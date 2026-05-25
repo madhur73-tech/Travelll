@@ -6,6 +6,7 @@
   <title>Dream Travel India</title>
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -17,6 +18,12 @@
       background:#081b29;
       color:white;
       overflow-x:hidden;
+      width:100%;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
     }
 
     /* NAVBAR */
@@ -29,6 +36,7 @@
       align-items:center;
       position:fixed;
       top:0;
+      left:0;
       z-index:1000;
       background:rgba(0,0,0,0.3);
       backdrop-filter:blur(10px);
@@ -49,6 +57,7 @@
       color:white;
       text-decoration:none;
       transition:0.3s;
+      font-size:16px;
     }
 
     nav ul li a:hover{
@@ -58,7 +67,7 @@
     /* HERO */
 
     .hero{
-      height:100vh;
+      min-height:100vh;
       background:
       linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
       url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop');
@@ -68,7 +77,11 @@
       justify-content:center;
       align-items:center;
       text-align:center;
-      padding:20px;
+      padding:120px 20px 60px;
+    }
+
+    .hero-content{
+      max-width:900px;
     }
 
     .hero-content h2{
@@ -81,6 +94,7 @@
       font-size:20px;
       margin-bottom:30px;
       color:#ddd;
+      line-height:1.6;
       animation:fadeUp 1.5s ease;
     }
 
@@ -94,10 +108,11 @@
       cursor:pointer;
       transition:0.3s;
       animation:fadeUp 2s ease;
+      font-weight:bold;
     }
 
     .hero-content button:hover{
-      transform:scale(1.1);
+      transform:scale(1.08);
       background:white;
     }
 
@@ -150,12 +165,13 @@
     .card-content p{
       color:#bbb;
       line-height:1.6;
+      font-size:15px;
     }
 
     /* PARALLAX SECTION */
 
     .parallax{
-      height:60vh;
+      min-height:60vh;
       background:
       linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
       url('https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1600&auto=format&fit=crop');
@@ -166,12 +182,13 @@
       justify-content:center;
       align-items:center;
       text-align:center;
-      padding:20px;
+      padding:40px 20px;
     }
 
     .parallax h2{
       font-size:55px;
       max-width:800px;
+      line-height:1.4;
     }
 
     /* FOOTER */
@@ -181,6 +198,7 @@
       text-align:center;
       background:#06141f;
       color:#aaa;
+      font-size:15px;
     }
 
     /* ANIMATION */
@@ -196,22 +214,132 @@
       }
     }
 
-    /* RESPONSIVE */
+    /* TABLET */
 
-    @media(max-width:768px){
+    @media (max-width: 992px){
+
+      nav{
+        padding:15px 5%;
+      }
 
       .hero-content h2{
-        font-size:45px;
+        font-size:55px;
+      }
+
+      .hero-content p{
+        font-size:18px;
       }
 
       .parallax h2{
-        font-size:35px;
+        font-size:42px;
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 768px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+        padding:15px 5%;
+      }
+
+      nav h1{
+        font-size:26px;
       }
 
       nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
         gap:15px;
       }
+
+      nav ul li a{
+        font-size:15px;
+      }
+
+      .hero{
+        padding-top:160px;
+      }
+
+      .hero-content h2{
+        font-size:40px;
+        line-height:1.2;
+      }
+
+      .hero-content p{
+        font-size:16px;
+      }
+
+      .hero-content button{
+        padding:12px 28px;
+        font-size:16px;
+      }
+
+      .title{
+        font-size:34px;
+        margin-bottom:40px;
+      }
+
+      .cards{
+        grid-template-columns:1fr;
+      }
+
+      .card img{
+        height:220px;
+      }
+
+      .parallax{
+        background-attachment:scroll;
+        min-height:auto;
+        padding:80px 20px;
+      }
+
+      .parallax h2{
+        font-size:30px;
+      }
     }
+
+    /* SMALL MOBILE */
+
+    @media (max-width: 480px){
+
+      nav h1{
+        font-size:22px;
+        text-align:center;
+      }
+
+      .hero-content h2{
+        font-size:32px;
+      }
+
+      .hero-content p{
+        font-size:15px;
+      }
+
+      .hero-content button{
+        width:100%;
+        max-width:250px;
+      }
+
+      .title{
+        font-size:28px;
+      }
+
+      .card-content h3{
+        font-size:24px;
+      }
+
+      .card-content p{
+        font-size:14px;
+      }
+
+      .parallax h2{
+        font-size:24px;
+      }
+    }
+
   </style>
 </head>
 
@@ -220,6 +348,7 @@
   <!-- NAVBAR -->
 
   <nav>
+
     <h1>DreamTravel India</h1>
 
     <ul>
@@ -228,20 +357,23 @@
       <li><a href="#">Tours</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
+
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
 
   <section class="hero">
 
     <div class="hero-content">
+
       <h2>Explore Incredible India</h2>
 
       <p>
-        Discover beautiful places, rich culture and unforgettable adventures.
+        Discover beautiful places, rich culture and unforgettable adventures across India.
       </p>
 
       <button>Start Journey</button>
+
     </div>
 
   </section>
@@ -254,58 +386,72 @@
 
     <div class="cards">
 
-      <!-- Dehradun -->
+      <!-- DEHRADUN -->
 
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop">
+
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop" alt="Dehradun">
 
         <div class="card-content">
+
           <h3>Dehradun</h3>
 
           <p>
             Enjoy the beautiful Himalayan mountains, green valleys and peaceful weather.
           </p>
+
         </div>
+
       </div>
 
-      <!-- Jaipur -->
+      <!-- JAIPUR -->
 
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=1200&auto=format&fit=crop">
+
+        <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=1200&auto=format&fit=crop" alt="Jaipur">
 
         <div class="card-content">
+
           <h3>Jaipur</h3>
 
           <p>
             Explore royal palaces, forts, and the colorful culture of Rajasthan.
           </p>
+
         </div>
+
       </div>
 
-      <!-- Meghalaya -->
+      <!-- MEGHALAYA -->
 
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop">
+
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop" alt="Meghalaya">
 
         <div class="card-content">
+
           <h3>Meghalaya</h3>
 
           <p>
             Experience waterfalls, living root bridges and lush green landscapes.
           </p>
+
         </div>
+
       </div>
 
     </div>
 
   </section>
 
-  <!-- PARALLAX -->
+  <!-- PARALLAX SECTION -->
 
   <section class="parallax">
+
     <h2>
       Travel isn't just visiting places. It's creating memories.
     </h2>
+
   </section>
 
 </body>
