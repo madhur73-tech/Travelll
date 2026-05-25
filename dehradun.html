@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dehradun</title>
+
+<style>
+body{margin:0;background:#081b29;color:white;font-family:Arial;}
+header{
+  padding:20px;
+  background:#06141f;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+h1{color:#00d9ff;margin:0;}
+
+button{
+  padding:10px 20px;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+  background:#00d9ff;
+  font-weight:bold;
+}
+
+.container{
+  padding:40px 8%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{background:#112e42;border-radius:15px;overflow:hidden;}
+.card img{width:100%;height:180px;object-fit:cover;}
+.card h3{padding:10px;color:#00d9ff;margin:0;}
+.card p{padding:0 10px;color:#bbb;margin:5px 0;}
+
+.map{
+  width:100%;
+  height:160px;
+  border:0;
+}
+
+.distance{
+  padding:0 10px 10px;
+  color:#00ff9d;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Dehradun</h1>
+  <button onclick="goBack()">Back</button>
+</header>
+
+<div class="container">
+
+<!-- Robber’s Cave -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200">
+  <h3>Robber’s Cave</h3>
+  <p>Natural cave river.</p>
+  <div class="distance" id="d0">Calculating distance...</div>
+  <iframe class="map" src="https://www.google.com/maps?q=Robbers%20Cave%20Dehradun&output=embed"></iframe>
+</div>
+
+<!-- Sahastradhara -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200">
+  <h3>Sahastradhara</h3>
+  <p>Hot springs.</p>
+  <div class="distance" id="d1">Calculating distance...</div>
+  <iframe class="map" src="https://www.google.com/maps?q=Sahastradhara%20Dehradun&output=embed"></iframe>
+</div>
+
+<!-- FRI -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200">
+  <h3>FRI</h3>
+  <p>Forest Research Institute.</p>
+  <div class="distance" id="d2">Calculating distance...</div>
+  <iframe class="map" src="https://www.google.com/maps?q=Forest%20Research%20Institute%20Dehradun&output=embed"></iframe>
+</div>
+
+<!-- Tapkeshwar -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=1200">
+  <h3>Tapkeshwar</h3>
+  <p>Shiva temple cave.</p>
+  <div class="distance" id="d3">Calculating distance...</div>
+  <iframe class="map" src="https://www.google.com/maps?q=Tapkeshwar%20Temple%20Dehradun&output=embed"></iframe>
+</div>
+
+<!-- Rajaji Park -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=1200">
+  <h3>Rajaji Park</h3>
+  <p>Wildlife safari.</p>
+  <div class="distance" id="d4">Calculating distance...</div>
+  <iframe class="map" src="https://www.google.com/maps?q=Rajaji%20National%20Park&output=embed"></iframe>
+</div>
+
+<!-- Clock Tower -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200">
+  <h3>Clock Tower</h3>
+  <p>City landmark.</p>
+  <div class="distance" id="d5">Calculating distance...</div>
+  <iframe class="map" src="https://www.google.com/maps?q=Clock%20Tower%20Dehradun&output=embed"></iframe>
+</div>
+
+<!-- Lacchiwala -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200">
+  <h3>Lacchiwala</h3>
+  <p>Picnic spot.</p>
+  <div class="distance" id="d6">Calculating distance...</div>
+  <iframe class="map" src="https://www.google.com/maps?q=Lacchiwala%20Dehradun&output=embed"></iframe>
+</div>
+
+<!-- Mindrolling -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1200">
+  <h3>Mindrolling</h3>
+  <p>Buddhist monastery.</p>
+  <div class="distance" id="d7">Calculating distance...</div>
+  <iframe class="map" src="https://www.google.com/maps?q=Mindrolling%20Monastery%20Dehradun&output=embed"></iframe>
+</div>
+
+<!-- Malsi Deer Park -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1501769214405-5e0c0c1c1c1c?q=80&w=1200">
+  <h3>Malsi Deer Park</h3>
+  <p>Nature park.</p>
+  <div class="distance" id="d8">Calculating distance...</div>
+  <iframe class="map" src="https://www.google.com/maps?q=Malsi%20Deer%20Park%20Dehradun&output=embed"></iframe>
+</div>
+
+<!-- FRI Museum -->
+<div class="card">
+  <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200">
+  <h3>FRI Museum</h3>
+  <p>Heritage museum.</p>
+  <div class="distance" id="d9">Calculating distance...</div>
+  <iframe class="map" src="https://www.google.com/maps?q=FRI%20Museum%20Dehradun&output=embed"></iframe>
+</div>
+
+</div>
+
+<script>
+// Destination coordinates (approx)
+const places = [
+  [30.3165, 78.0322], // Robber’s Cave
+  [30.3333, 78.0446], // Sahastradhara
+  [30.3380, 77.9996], // FRI
+  [30.4636, 78.1118], // Tapkeshwar
+  [30.3950, 78.0019], // Rajaji Park
+  [30.3240, 78.0400], // Clock Tower
+  [30.2849, 77.9703], // Lacchiwala
+  [30.3500, 78.0570], // Mindrolling
+  [30.3325, 78.0520], // Malsi Deer Park
+  [30.3380, 77.9996]  // FRI Museum
+];
+
+// Distance formula (Haversine)
+function getDistance(lat1, lon1, lat2, lon2){
+  const R = 6371;
+  const dLat = (lat2-lat1)*Math.PI/180;
+  const dLon = (lon2-lon1)*Math.PI/180;
+  const a =
+    Math.sin(dLat/2)*Math.sin(dLat/2) +
+    Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180) *
+    Math.sin(dLon/2)*Math.sin(dLon/2);
+
+  const c = 2*Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  return (R*c).toFixed(2);
+}
+
+// Get user location
+navigator.geolocation.getCurrentPosition((pos)=>{
+  const userLat = pos.coords.latitude;
+  const userLon = pos.coords.longitude;
+
+  places.forEach((p,i)=>{
+    const dist = getDistance(userLat,userLon,p[0],p[1]);
+    document.getElementById("d"+i).innerText = dist + " km away";
+  });
+
+},()=>{
+  document.querySelectorAll(".distance").forEach(d=>{
+    d.innerText = "Location permission denied";
+  });
+});
+
+function goBack(){
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
